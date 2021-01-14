@@ -37,7 +37,7 @@ users = {
 def hello_world():
     return 'Hello, world!'
 
-@app.route('/users')
+@app.route('/users', methods=['GET', 'POST'])
 def get_users():
     search_username = request.args.get('name')
     if search_username :
